@@ -27,3 +27,18 @@ class ProfileController extends Controller
         return redirect('admin/profile/edit');
     }
 }
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create', 'Admin\NewsController@add');
+});
+
+//kadai3
+//Route::group(['prefix' => 'admin'], function() {
+    //Route::get('XXX', 'Admin\AAAController@bbb');
+//});
+
+//kadai4
+Route::group(['prefix' => 'admin'], function() {
+     Route::get('admin/profile/create', 'Admin\NewsController@add');
+     Route::get('admin/profile/edit', 'Admin\NewsController@edit');
+});
